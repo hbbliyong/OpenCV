@@ -1,8 +1,10 @@
 import cv2
-
+import os
 #使用训练分类器查找人脸
 #filepath=".\\img\\xingye-1.png"#不知道为啥相对路径找不到
-filepath="D:\\study\\opencv\\code\\Test\\img\\xingye-3.png"
+BASE_DIR=os.path.dirname(__file__)#获取当前文件夹的绝对路径
+#filepath="D:\\study\\opencv\\code\\Test\\img\\xingye-3.png"
+filepath=os.path.join(BASE_DIR,"img/xingye-3.png")
 img=cv2.imread(filepath)
 #转换成灰色,图片转换成灰色（去除色彩干扰，让图片识别更准确）
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
