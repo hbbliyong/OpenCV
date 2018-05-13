@@ -12,8 +12,8 @@ cap=cv2.VideoCapture(0)
 fourcc=cv2.VideoWriter_fourcc(*'XVID')
 out=cv2.VideoWriter('ouput.avi',fourcc,20.0,(640,480))
 
-while(cap.isOpened()):
-    ret,frame=cap.read()
+while(cap.isOpened()):#检测初始化摄像头是否成功
+    ret,frame=cap.read() #如果读帧正确返回True
     if ret==True:
         frame=cv2.flip(frame,0)
 
